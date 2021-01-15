@@ -5,7 +5,7 @@ Parking App Group 1
 * Zoom meeting discussion about the flow of the app.
 * Pinal made the following app flow sketches:
 
-<img src="images/Screenshot_1604091928.png" width="260" height="500"> <img src="images/Screenshot_1604091928.png" width="260" height="500">
+<img src="appflow1.jpeg" width="260" height="500"> <img src="appflow2.jpeg" width="260" height="500">
 ### January 15th: Division of tasks.
 **Before dividing functionalities:** Make a data model and mvc architecture together, so there is no conflict.
 
