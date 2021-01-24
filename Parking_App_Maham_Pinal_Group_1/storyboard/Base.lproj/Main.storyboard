@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iLB-Tg-mjq">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Update Profile-->
+        <scene sceneID="RrM-mv-9in">
+            <objects>
+                <viewController id="Nb0-eJ-fF6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PD7-gB-HAL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="YpW-4R-s9n"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Update Profile" image="person.fill.badge.plus" catalog="system" id="Ucr-79-ZIv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IW3-eY-fae" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="70"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="1zQ-y5-J1U">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="iLB-Tg-mjq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qgl-pB-eCe">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.29411764709999999" green="0.32549019610000002" blue="0.52463030259999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.18823529411764706" green="0.25490196078431371" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="b7u-U4-bVJ" kind="relationship" relationship="viewControllers" id="rkw-xl-4EY"/>
+                        <segue destination="tHW-7p-emW" kind="relationship" relationship="viewControllers" id="A6A-TW-jaA"/>
+                        <segue destination="Nb0-eJ-fF6" kind="relationship" relationship="viewControllers" id="qc2-ru-qHM"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TEx-kU-oAQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13.043478260869566" y="69.642857142857139"/>
+        </scene>
+        <!--ParkingListStoryboard-->
+        <scene sceneID="3v8-hg-Eg7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ParkingListStoryboard" id="b7u-U4-bVJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Parking List" id="ldK-jI-YP2"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7zn-ke-MmA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-202" y="481"/>
+        </scene>
+        <!--AddParkingStoryboard-->
+        <scene sceneID="cRL-Sq-9sU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddParkingStoryboard" id="tHW-7p-emW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Add Parking" id="9g7-s1-ZvF"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0kL-Za-nnu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="253" y="481"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.fill.badge.plus" catalog="system" width="128" height="124"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
