@@ -4,31 +4,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Update Profile-->
-        <scene sceneID="RrM-mv-9in">
-            <objects>
-                <viewController id="Nb0-eJ-fF6" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PD7-gB-HAL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="YpW-4R-s9n"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Update Profile" image="person.fill.badge.plus" catalog="system" id="Ucr-79-ZIv"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IW3-eY-fae" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1052" y="70"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="1zQ-y5-J1U">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="iLB-Tg-mjq" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabContainer" automaticallyAdjustsScrollViewInsets="NO" id="iLB-Tg-mjq" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qgl-pB-eCe">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -40,7 +22,7 @@
                     <connections>
                         <segue destination="b7u-U4-bVJ" kind="relationship" relationship="viewControllers" id="rkw-xl-4EY"/>
                         <segue destination="tHW-7p-emW" kind="relationship" relationship="viewControllers" id="A6A-TW-jaA"/>
-                        <segue destination="Nb0-eJ-fF6" kind="relationship" relationship="viewControllers" id="qc2-ru-qHM"/>
+                        <segue destination="eQs-FR-Nil" kind="relationship" relationship="viewControllers" id="u3x-nh-2Ae"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TEx-kU-oAQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -65,13 +47,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0kL-Za-nnu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="253" y="481"/>
+            <point key="canvasLocation" x="73" y="501"/>
+        </scene>
+        <!--UpdateProfileStoryboard-->
+        <scene sceneID="bNN-rf-Azb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="UpdateProfileStoryboard" id="eQs-FR-Nil" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="RJJ-q4-5M9"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yui-zB-Ydp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="351" y="481"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="person.fill.badge.plus" catalog="system" width="128" height="124"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

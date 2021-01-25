@@ -31,7 +31,8 @@ class ParkingDataController{
             newParking.latitude = parkingData.latitude
             newParking.longitude = parkingData.longitude
             newParking.parking_id = Int16(Int((Int16(parkingData.parking_id))))
-            newParking.user_id = Int16(Int((Int16(parkingData.user_id))))
+           // newParking.user_id = Int16(Int((Int16(parkingData.user_id))))
+            //newParking.user_id = 1
             newParking.street_address = parkingData.street_address
             
             try moc.save()
