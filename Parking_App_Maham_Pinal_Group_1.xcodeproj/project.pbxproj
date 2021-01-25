@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		697F818025BF75D600DF1E5C /* UpdateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697F817F25BF75D600DF1E5C /* UpdateProfileViewController.swift */; };
-		697F818525BF764400DF1E5C /* UpdateProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 697F818425BF764400DF1E5C /* UpdateProfileStoryboard.storyboard */; };
 		69AA8E5925B4BB100097395B /* ParkingDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AA8E5825B4BB100097395B /* ParkingDetailViewController.swift */; };
 		69AA8E5D25B4BBD70097395B /* ParkingListStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69AA8E5C25B4BBD70097395B /* ParkingListStoryboard.storyboard */; };
 		69AA8E6025B4BC140097395B /* AddParkingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69AA8E5F25B4BC140097395B /* AddParkingStoryboard.storyboard */; };
@@ -27,8 +25,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		697F817F25BF75D600DF1E5C /* UpdateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewController.swift; sourceTree = "<group>"; };
-		697F818425BF764400DF1E5C /* UpdateProfileStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UpdateProfileStoryboard.storyboard; sourceTree = "<group>"; };
 		69AA8E5825B4BB100097395B /* ParkingDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingDetailViewController.swift; sourceTree = "<group>"; };
 		69AA8E5C25B4BBD70097395B /* ParkingListStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ParkingListStoryboard.storyboard; sourceTree = "<group>"; };
 		69AA8E5F25B4BC140097395B /* AddParkingStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddParkingStoryboard.storyboard; sourceTree = "<group>"; };
@@ -65,7 +61,6 @@
 				9CD0749F25B381CE000E967F /* Home.storyboard */,
 				69AA8E5C25B4BBD70097395B /* ParkingListStoryboard.storyboard */,
 				69AA8E5F25B4BC140097395B /* AddParkingStoryboard.storyboard */,
-				697F818425BF764400DF1E5C /* UpdateProfileStoryboard.storyboard */,
 			);
 			path = storyboard;
 			sourceTree = "<group>";
@@ -85,7 +80,6 @@
 				69EFD54225B394DB0061FBD9 /* ParkingTableViewCell.swift */,
 				69EFD54525B395240061FBD9 /* AddParkingViewController.swift */,
 				69AA8E5825B4BB100097395B /* ParkingDetailViewController.swift */,
-				697F817F25BF75D600DF1E5C /* UpdateProfileViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -194,7 +188,6 @@
 				69AA8E6025B4BC140097395B /* AddParkingStoryboard.storyboard in Resources */,
 				9CD074A925B381D2000E967F /* LaunchScreen.storyboard in Resources */,
 				9CD074A625B381D2000E967F /* Assets.xcassets in Resources */,
-				697F818525BF764400DF1E5C /* UpdateProfileStoryboard.storyboard in Resources */,
 				9CD074A125B381CE000E967F /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,7 +202,6 @@
 				9CD0749E25B381CE000E967F /* ViewController.swift in Sources */,
 				9CD0749A25B381CE000E967F /* AppDelegate.swift in Sources */,
 				69AA8E6625B4CC1D0097395B /* ParkingDataController.swift in Sources */,
-				697F818025BF75D600DF1E5C /* UpdateProfileViewController.swift in Sources */,
 				9CD074A425B381CE000E967F /* Parking_App_Maham_Pinal_Group_1.xcdatamodeld in Sources */,
 				69AA8E6A25B4D2D30097395B /* ParkingData.swift in Sources */,
 				69EFD54025B3945F0061FBD9 /* ListViewController.swift in Sources */,
