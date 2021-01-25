@@ -13,7 +13,6 @@ class AddParkingViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     let geocoder = CLGeocoder()
     let locationManager = CLLocationManager()
-   
     @IBOutlet weak var txtStreetAdd: UITextView!
     @IBOutlet weak var btnCurrentLocation: UIButton!
     @IBOutlet weak var txtNoOfHost: UITextField!
@@ -21,21 +20,18 @@ class AddParkingViewController: UIViewController, UIPickerViewDelegate, UIPicker
     @IBOutlet weak var txtBuildingCode: UITextField!
     @IBOutlet weak var hoursPicker: UIPickerView!
     var selectedHours :  Int = 0
-    let hours = ["1","2","3","4","5","6","7","8"]
+    let hours = ["1-hour or less", "4-hour", "12-hour", " 24-hour"]
     var isCurrentLocation = false
     let parkingDataController = ParkingDataController()
     var latitude : Double = 0.0
     var longitude : Double = 0.0
     var parkingId : Int = 1
   
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hoursPicker.dataSource = self
         self.hoursPicker.delegate = self
         self.txtStreetAdd.delegate = self
-      
-
         txtStreetAdd.layer.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1.0).cgColor
         txtStreetAdd.layer.borderWidth = 1.0;
         txtStreetAdd.layer.cornerRadius = 5.0;
@@ -45,9 +41,7 @@ class AddParkingViewController: UIViewController, UIPickerViewDelegate, UIPicker
         //self.parkingDataController.getParkingID()
         textViewDidEndEditing(txtStreetAdd)
         textViewDidEndEditing(txtStreetAdd)
-        
     }
-    
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.textColor == UIColor.lightGray {
             textView.text = nil
@@ -61,8 +55,6 @@ class AddParkingViewController: UIViewController, UIPickerViewDelegate, UIPicker
             textView.textColor = UIColor.lightGray
         }
     }
-    
-    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         1
     }
@@ -70,8 +62,16 @@ class AddParkingViewController: UIViewController, UIPickerViewDelegate, UIPicker
         return hours.count
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        print("Hours \(hours[row])")
-        selectedHours = Int(hours[row])!
+        if row == 0{
+            selectedHours = 1}
+        if row == 1{
+            selectedHours = 4}
+        if row == 2{
+            selectedHours = 12}
+        if row == 3{
+            selectedHours = 24}
+       // print("pos \(row) selectedHours \(selectedHours)")
+        
         return hours[row]
     }
     
@@ -139,17 +139,16 @@ class AddParkingViewController: UIViewController, UIPickerViewDelegate, UIPicker
         self.present(alert, animated: true, completion: nil)
     }
     
-    
     func insertParkingData(lat:Double, long:Double){
-        
+   
         if UserDefaults.standard.integer(forKey: "parkingId") != 0{
             parkingId = UserDefaults.standard.integer(forKey: "parkingId") + 1
         }
+        //let userID = UserDefaults.standard.integer(forKey: "user_ID")
         
-        let parkingData = ParkingData(parking_id: parkingId,user_id: 2, building_code: txtBuildingCode.text!, car_plate_no: txtCarPlateNo.text!, hours_to_park: selectedHours, no_of_hosts: txtNoOfHost.text!, street_address: txtStreetAdd.text!, latitude: self.latitude, longitude: self.longitude, parking_date: Date())
+        let parkingData = ParkingData(parking_id: parkingId,user_id: 1, building_code: txtBuildingCode.text!, car_plate_no: txtCarPlateNo.text!, hours_to_park: selectedHours, no_of_hosts: txtNoOfHost.text!, street_address: txtStreetAdd.text!, latitude: self.latitude, longitude: self.longitude, parking_date: Date())
         
                 let insertionStatus = self.parkingDataController.insertAccount(parkingData: parkingData)
-        
                 switch insertionStatus {
                 case .INSERT_SUCCESS:
                     UserDefaults.standard.set(parkingId, forKey: "parkingId")

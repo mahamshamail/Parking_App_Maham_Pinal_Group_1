@@ -23,12 +23,30 @@ class ListViewController: UIViewController {
         tableParking.dataSource = self
         self.tableParking.rowHeight = 133
         self.dateFormatter.dateFormat = "yyyy-MM-dd"
-        self.list = self.parkingDataController.getAllParking()!
+        self.list = self.parkingDataController.getAllParking(userID: 2)!
+        let txtTitle = UILabel()
+        txtTitle.text = "Parking List"
+        txtTitle.sizeToFit()
+        txtTitle.textColor = .white
+            let leftItem = UIBarButtonItem(customView: txtTitle)
+            self.navigationItem.leftBarButtonItem = leftItem
+//
+//        let logoutImage = UIImageView()
+//        logoutImage.image = UIImage(systemName: "logout")
+//        let rightItem = UIBarButtonItem(customView: logoutImage)
+//        self.navigationItem.rightBarButtonItem = rightItem
         
+        let logoutBarButtonItem = UIBarButtonItem(title: "Logout", style: .done, target: self, action: #selector(logoutUser))
+         self.navigationItem.rightBarButtonItem  = logoutBarButtonItem
     }
     
+    @objc func logoutUser(){
+         print("clicked")
+    }
+    
+    
     override func viewWillAppear(_ animated: Bool) {
-        self.list = self.parkingDataController.getAllParking()!
+        self.list = self.parkingDataController.getAllParking(userID: 2)!
         self.tableParking.reloadData()
     }
 
@@ -88,3 +106,5 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         
     }
 }
+
+

@@ -16,13 +16,13 @@ class ParkingDataController{
         case INSERT_FAILURE
     }
     private var moc : NSManagedObjectContext
-    
     init() {
         self.moc = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     }
     func insertAccount(parkingData : ParkingData) -> ParkingStatus{
         do{
             let newParking = NSEntityDescription.insertNewObject(forEntityName: "Parking", into: moc) as! Parking
+            
             newParking.parking_date = parkingData.parking_date
             newParking.building_code = parkingData.building_code
             newParking.car_plate_no = parkingData.car_plate_no
@@ -47,9 +47,13 @@ class ParkingDataController{
         }
     }
     
-    func getAllParking() -> [Parking]?{
+    func getAllParking(userID : Int) -> [Parking]?{
     
         let fetchRequest = NSFetchRequest<Parking>(entityName: "Parking")
+        
+        let predicate = NSPredicate(format: "user_id == %ld", userID)
+        fetchRequest.predicate = predicate
+        
         let sortDescriptors = NSSortDescriptor(key: "parking_date", ascending: false)
         fetchRequest.sortDescriptors = [sortDescriptors]
         do{

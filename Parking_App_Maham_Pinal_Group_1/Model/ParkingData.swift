@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-class ParkingData  {
+class ParkingData {
 
       var parking_id : Int
       var user_id : Int

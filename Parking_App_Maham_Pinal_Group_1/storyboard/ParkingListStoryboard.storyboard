@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Parking List-->
+        <!--List View Controller-->
         <scene sceneID="EYX-JD-QQk">
             <objects>
                 <viewController id="6OA-DI-ThW" customClass="ListViewController" customModule="Parking_App_Maham_Pinal_Group_1" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,35 +38,29 @@
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="18" id="ux6-gi-ZTv"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Parking Address : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xr-bJ-g8e">
-                                                    <rect key="frame" x="38" y="12" width="125" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                    <color key="textColor" red="0.39870786670000002" green="0.44193387029999998" blue="0.67061370610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ufb-MH-qha">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ufb-MH-qha">
                                                     <rect key="frame" x="171" y="5" width="223" height="34"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Parking Date : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Xb-Rh-xRN">
-                                                    <rect key="frame" x="38" y="46" width="101" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parking Date : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Xb-Rh-xRN">
+                                                    <rect key="frame" x="38" y="45" width="101" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="101" id="6ar-qL-Bce"/>
+                                                        <constraint firstAttribute="height" constant="18" id="KCG-Sh-hXq"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                     <color key="textColor" red="0.40000000000000002" green="0.44705882352941173" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xp9-d5-f8a">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xp9-d5-f8a">
                                                     <rect key="frame" x="171" y="71" width="223" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Parking Hours : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3PL-xw-C3U">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parking Hours : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3PL-xw-C3U">
                                                     <rect key="frame" x="38" y="75" width="110" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                     <color key="textColor" red="0.40000000000000002" green="0.44705882352941173" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
@@ -88,16 +82,38 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Parking Address : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xr-bJ-g8e">
+                                                    <rect key="frame" x="38" y="14" width="125" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="125" id="L1Q-iz-cl6"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                    <color key="textColor" red="0.39870786670000002" green="0.44193387029999998" blue="0.67061370610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="0xr-bJ-g8e" firstAttribute="top" secondItem="ExS-mC-IRH" secondAttribute="topMargin" constant="1" id="8jT-0o-nMd"/>
                                                 <constraint firstItem="Ufb-MH-qha" firstAttribute="top" secondItem="ExS-mC-IRH" secondAttribute="top" constant="5" id="Bt5-zZ-fhK"/>
+                                                <constraint firstItem="UPh-tm-s6J" firstAttribute="top" secondItem="3PL-xw-C3U" secondAttribute="bottom" constant="16" id="CZ7-KS-xBw"/>
+                                                <constraint firstItem="7Xb-Rh-xRN" firstAttribute="top" secondItem="0xr-bJ-g8e" secondAttribute="bottom" constant="17" id="IGG-PV-ls3"/>
                                                 <constraint firstAttribute="bottom" secondItem="UPh-tm-s6J" secondAttribute="bottom" id="IzA-fS-lg3"/>
+                                                <constraint firstItem="0xr-bJ-g8e" firstAttribute="leading" secondItem="2NA-bY-fXz" secondAttribute="trailing" constant="8" symbolic="YES" id="Lam-Vh-8e0"/>
                                                 <constraint firstAttribute="trailing" secondItem="Ufb-MH-qha" secondAttribute="trailing" constant="10" id="R0g-er-P5s"/>
+                                                <constraint firstItem="0xr-bJ-g8e" firstAttribute="centerY" secondItem="2NA-bY-fXz" secondAttribute="centerY" id="R16-xF-vR0"/>
+                                                <constraint firstItem="3PL-xw-C3U" firstAttribute="firstBaseline" secondItem="xp9-d5-f8a" secondAttribute="baseline" id="Ri2-Ac-HDu"/>
                                                 <constraint firstAttribute="trailing" secondItem="UPh-tm-s6J" secondAttribute="trailing" id="Txh-kZ-L4D"/>
+                                                <constraint firstItem="3PL-xw-C3U" firstAttribute="baseline" secondItem="xp9-d5-f8a" secondAttribute="baseline" id="VeF-Et-AlV"/>
                                                 <constraint firstItem="2NA-bY-fXz" firstAttribute="leading" secondItem="ExS-mC-IRH" secondAttribute="leading" constant="10" id="WwP-uI-fmj"/>
                                                 <constraint firstItem="UPh-tm-s6J" firstAttribute="leading" secondItem="ExS-mC-IRH" secondAttribute="leading" id="ahK-gO-QCa"/>
                                                 <constraint firstItem="2NA-bY-fXz" firstAttribute="top" secondItem="ExS-mC-IRH" secondAttribute="top" constant="10" id="eZV-GM-PSh"/>
                                                 <constraint firstItem="2NA-bY-fXz" firstAttribute="leading" secondItem="ExS-mC-IRH" secondAttribute="leading" constant="10" id="hQb-qr-JBh"/>
+                                                <constraint firstItem="0xr-bJ-g8e" firstAttribute="leading" secondItem="3PL-xw-C3U" secondAttribute="leading" id="jKT-kB-kSP"/>
+                                                <constraint firstItem="3PL-xw-C3U" firstAttribute="top" secondItem="7Xb-Rh-xRN" secondAttribute="bottom" constant="12" id="p31-oa-IuV"/>
+                                                <constraint firstItem="Ufb-MH-qha" firstAttribute="leading" secondItem="0xr-bJ-g8e" secondAttribute="trailing" constant="5" id="s6f-fT-xUS"/>
+                                                <constraint firstItem="0xr-bJ-g8e" firstAttribute="leading" secondItem="7Xb-Rh-xRN" secondAttribute="leading" id="vlx-wc-gXb"/>
+                                                <constraint firstItem="xp9-d5-f8a" firstAttribute="leading" secondItem="3PL-xw-C3U" secondAttribute="trailing" constant="23" id="wwE-dy-fO2"/>
+                                                <constraint firstItem="0xr-bJ-g8e" firstAttribute="top" secondItem="ExS-mC-IRH" secondAttribute="topMargin" constant="1" id="yRb-gy-YCx"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -119,7 +135,7 @@
                             <constraint firstItem="rs3-hy-k0s" firstAttribute="top" secondItem="gr4-dc-FLt" secondAttribute="top" id="j7z-Kx-CVs"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Parking List" id="ULB-2j-1io"/>
+                    <navigationItem key="navigationItem" id="ULB-2j-1io"/>
                     <connections>
                         <outlet property="tableParking" destination="rs3-hy-k0s" id="6uG-VC-Gxl"/>
                         <segue destination="f5i-oX-0Ea" kind="show" identifier="detailsegue" id="hnn-hW-m2s"/>
@@ -224,10 +240,15 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="i3y-Ju-v1s"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="View your Parking Location">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wZa-kn-tlH"/>
