@@ -26,24 +26,19 @@ class UpdateProfileViewController: UIViewController, UIImagePickerControllerDele
     @IBOutlet weak var updateBtn: UIButton!
     
     @IBOutlet weak var DeleteBtn: UIButton!
+    
      let userController = UserController()
      let accountController = AccountController()
     
     let emailAddress = UserDefaults.standard.value(forKey: "user_email") as! String
     
-    
+    var currentImage : UIImage!
     var imagePicker = UIImagePickerController()
-//    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!){
-//            self.dismiss(animated: true, completion: { () -> Void in
-//
-//            })
-//
-//            profilePicture.image = image
-//        }
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        let image = info[ UIImagePickerController.InfoKey.originalImage.rawValue ] as! UIImage
-        profilePicture.image = image
-        dismiss(animated:true, completion: nil)
+    internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[ .editedImage ] as? UIImage else{ return  }
+        dismiss(animated: true)
+        currentImage = image
+        profilePicture.image = currentImage
     }
 
     override func viewDidLoad() {
@@ -68,6 +63,8 @@ class UpdateProfileViewController: UIViewController, UIImagePickerControllerDele
 
                    present(imagePicker, animated: true, completion: nil)
                }
+       
+
     }
     
     @IBAction func updateProfileButton(_ sender: Any) {
@@ -81,6 +78,13 @@ class UpdateProfileViewController: UIViewController, UIImagePickerControllerDele
             let confirmNewPwd = self.confirmNewPassword.text!
             let contact = self.contactNumber.text!
             let car_plate = self.carPlateNumber.text!
+            let profilePic = self.profilePicture.image!
+            
+//            if self.profilePicture.image != nil{
+//
+//
+//            }
+//
             if fname.count < 1 || lname.count < 1
             {
                 let alert = UIAlertController(title: "Update Unsuccessful", message: "Enter valid first and last name. Try again!", preferredStyle: .alert)

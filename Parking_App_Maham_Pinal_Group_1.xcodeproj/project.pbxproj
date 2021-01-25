@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C59166B25BF4B1600C2D3C4 /* ImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C59166A25BF4B1600C2D3C4 /* ImageController.swift */; };
 		9CD0749A25B381CE000E967F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD0749925B381CE000E967F /* AppDelegate.swift */; };
 		9CD0749C25B381CE000E967F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD0749B25B381CE000E967F /* SceneDelegate.swift */; };
 		9CD074A125B381CE000E967F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CD0749F25B381CE000E967F /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C59166A25BF4B1600C2D3C4 /* ImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageController.swift; sourceTree = "<group>"; };
 		9CD0749625B381CE000E967F /* Parking_App_Maham_Pinal_Group_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parking_App_Maham_Pinal_Group_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD0749925B381CE000E967F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CD0749B25B381CE000E967F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			children = (
 				9CD93A3A25B97491002BE1A7 /* AccountController.swift */,
 				9CD93A3D25B974A1002BE1A7 /* UserController.swift */,
+				9C59166A25BF4B1600C2D3C4 /* ImageController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				9CD0749A25B381CE000E967F /* AppDelegate.swift in Sources */,
 				9CD93A3E25B974A1002BE1A7 /* UserController.swift in Sources */,
 				9CD074A425B381CE000E967F /* Parking_App_Maham_Pinal_Group_1.xcdatamodeld in Sources */,
+				9C59166B25BF4B1600C2D3C4 /* ImageController.swift in Sources */,
 				9CD93A2F25B95E0D002BE1A7 /* UpdateProfileViewController.swift in Sources */,
 				9CFE0BFF25B7672B00B7D675 /* ViewController.swift in Sources */,
 				9CD93A3825B9633A002BE1A7 /* ParkingLocationViewController.swift in Sources */,

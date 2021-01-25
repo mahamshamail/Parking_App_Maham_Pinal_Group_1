@@ -37,10 +37,10 @@
         <attribute name="email" attributeType="String"/>
         <attribute name="first_name" attributeType="String"/>
         <attribute name="last_name" attributeType="String"/>
-        <attribute name="profile_pic" optional="YES" attributeType="String"/>
+        <attribute name="profile_pic" optional="YES" attributeType="String" allowsExternalBinaryDataStorage="YES"/>
         <attribute name="user_id" attributeType="UUID" usesScalarValueType="NO"/>
         <relationship name="account" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Account" inverseName="of_user" inverseEntity="Account"/>
-        <relationship name="parkingID" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Parking" inverseName="userID" inverseEntity="Parking"/>
+        <relationship name="parkingID" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Parking" inverseName="userID" inverseEntity="Parking"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="user_id"/>

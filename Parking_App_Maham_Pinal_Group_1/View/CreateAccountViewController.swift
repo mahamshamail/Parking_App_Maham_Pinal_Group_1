@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateAccountViewController: UIViewController {
+class CreateAccountViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var firstName: UITextField!
@@ -21,23 +21,22 @@ class CreateAccountViewController: UIViewController {
     @IBOutlet weak var createAccount: UIButton!
     
     let accountController = AccountController()
-
+   
+    var currentImage : UIImage!
+    var imagePicker = UIImagePickerController()
+    internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let image = info[ .editedImage ] as? UIImage else{ return  }
+        dismiss(animated: true)
+        currentImage = image
+        profilePicture.image = currentImage
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.createAccount.layer.cornerRadius = 5;
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     
     @IBAction func createMyAccountButton(_ sender: Any) {
@@ -164,6 +163,15 @@ class CreateAccountViewController: UIViewController {
         }
     }
     @IBAction func addProfilePictureButton(_ sender: Any) {
+        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
+                   print("Button capture")
+
+                   imagePicker.delegate = self
+                   imagePicker.sourceType = .savedPhotosAlbum
+                   imagePicker.allowsEditing = true
+
+                   present(imagePicker, animated: true, completion: nil)
+               }
     }
     
     
