@@ -71,7 +71,7 @@ class ViewController: UIViewController {
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "default action"), style: .default, handler: {_ in
             print(#function, "Navigating to the home screen")
             
-            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let storyboard = UIStoryboard(name: "Home", bundle: Bundle.main)
             let tabContainer = storyboard.instantiateViewController(withIdentifier: "TabContainer")
             
             tabContainer.navigationItem.hidesBackButton = true
