@@ -7,25 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C59166B25BF4B1600C2D3C4 /* ImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C59166A25BF4B1600C2D3C4 /* ImageController.swift */; };
+		9C59167525BF707C00C2D3C4 /* UpdateProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C59167425BF707C00C2D3C4 /* UpdateProfileStoryboard.storyboard */; };
 		9CD0749A25B381CE000E967F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD0749925B381CE000E967F /* AppDelegate.swift */; };
 		9CD0749C25B381CE000E967F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD0749B25B381CE000E967F /* SceneDelegate.swift */; };
-		9CD0749E25B381CE000E967F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD0749D25B381CE000E967F /* ViewController.swift */; };
 		9CD074A125B381CE000E967F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CD0749F25B381CE000E967F /* Main.storyboard */; };
 		9CD074A425B381CE000E967F /* Parking_App_Maham_Pinal_Group_1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9CD074A225B381CE000E967F /* Parking_App_Maham_Pinal_Group_1.xcdatamodeld */; };
 		9CD074A625B381D2000E967F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CD074A525B381D2000E967F /* Assets.xcassets */; };
 		9CD074A925B381D2000E967F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CD074A725B381D2000E967F /* LaunchScreen.storyboard */; };
+		9CD93A2C25B95DDD002BE1A7 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD93A2B25B95DDD002BE1A7 /* CreateAccountViewController.swift */; };
+		9CD93A2F25B95E0D002BE1A7 /* UpdateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD93A2E25B95E0D002BE1A7 /* UpdateProfileViewController.swift */; };
+		9CD93A3825B9633A002BE1A7 /* ParkingLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD93A3725B9633A002BE1A7 /* ParkingLocationViewController.swift */; };
+		9CD93A3B25B97491002BE1A7 /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD93A3A25B97491002BE1A7 /* AccountController.swift */; };
+		9CD93A3E25B974A1002BE1A7 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD93A3D25B974A1002BE1A7 /* UserController.swift */; };
+		9CFE0BFF25B7672B00B7D675 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFE0BFE25B7672B00B7D675 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C59166A25BF4B1600C2D3C4 /* ImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageController.swift; sourceTree = "<group>"; };
+		9C59167425BF707C00C2D3C4 /* UpdateProfileStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UpdateProfileStoryboard.storyboard; sourceTree = "<group>"; };
 		9CD0749625B381CE000E967F /* Parking_App_Maham_Pinal_Group_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parking_App_Maham_Pinal_Group_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD0749925B381CE000E967F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CD0749B25B381CE000E967F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9CD0749D25B381CE000E967F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9CD074A025B381CE000E967F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9CD074A325B381CE000E967F /* Parking_App_Maham_Pinal_Group_1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Parking_App_Maham_Pinal_Group_1.xcdatamodel; sourceTree = "<group>"; };
 		9CD074A525B381D2000E967F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CD074A825B381D2000E967F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CD074AA25B381D2000E967F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CD93A2B25B95DDD002BE1A7 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		9CD93A2E25B95E0D002BE1A7 /* UpdateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewController.swift; sourceTree = "<group>"; };
+		9CD93A3725B9633A002BE1A7 /* ParkingLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingLocationViewController.swift; sourceTree = "<group>"; };
+		9CD93A3A25B97491002BE1A7 /* AccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
+		9CD93A3D25B974A1002BE1A7 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		9CFE0BFE25B7672B00B7D675 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +53,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C59167725BF709500C2D3C4 /* storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				9CD0749F25B381CE000E967F /* Main.storyboard */,
+				9C59167425BF707C00C2D3C4 /* UpdateProfileStoryboard.storyboard */,
+			);
+			path = storyboard;
+			sourceTree = "<group>";
+		};
 		9CD0748D25B381CE000E967F = {
 			isa = PBXGroup;
 			children = (
@@ -58,13 +81,12 @@
 		9CD0749825B381CE000E967F /* Parking_App_Maham_Pinal_Group_1 */ = {
 			isa = PBXGroup;
 			children = (
-				9CD074B525B38233000E967F /* Controller */,
-				9CD074B425B3822D000E967F /* View */,
-				9CD074B225B381E8000E967F /* Model */,
+				9C59167725BF709500C2D3C4 /* storyboard */,
+				9CFE0BFC25B766E200B7D675 /* Model */,
+				9CFE0BFB25B766DA00B7D675 /* View */,
+				9CFE0BFA25B766CA00B7D675 /* Controller */,
 				9CD0749925B381CE000E967F /* AppDelegate.swift */,
 				9CD0749B25B381CE000E967F /* SceneDelegate.swift */,
-				9CD0749D25B381CE000E967F /* ViewController.swift */,
-				9CD0749F25B381CE000E967F /* Main.storyboard */,
 				9CD074A525B381D2000E967F /* Assets.xcassets */,
 				9CD074A725B381D2000E967F /* LaunchScreen.storyboard */,
 				9CD074AA25B381D2000E967F /* Info.plist */,
@@ -73,25 +95,32 @@
 			path = Parking_App_Maham_Pinal_Group_1;
 			sourceTree = "<group>";
 		};
-		9CD074B225B381E8000E967F /* Model */ = {
+		9CFE0BFA25B766CA00B7D675 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				9CD93A3A25B97491002BE1A7 /* AccountController.swift */,
+				9CD93A3D25B974A1002BE1A7 /* UserController.swift */,
+				9C59166A25BF4B1600C2D3C4 /* ImageController.swift */,
 			);
-			path = Model;
+			path = Controller;
 			sourceTree = "<group>";
 		};
-		9CD074B425B3822D000E967F /* View */ = {
+		9CFE0BFB25B766DA00B7D675 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9CFE0BFE25B7672B00B7D675 /* ViewController.swift */,
+				9CD93A2B25B95DDD002BE1A7 /* CreateAccountViewController.swift */,
+				9CD93A2E25B95E0D002BE1A7 /* UpdateProfileViewController.swift */,
+				9CD93A3725B9633A002BE1A7 /* ParkingLocationViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		9CD074B525B38233000E967F /* Controller */ = {
+		9CFE0BFC25B766E200B7D675 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Controller;
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +183,7 @@
 			files = (
 				9CD074A925B381D2000E967F /* LaunchScreen.storyboard in Resources */,
 				9CD074A625B381D2000E967F /* Assets.xcassets in Resources */,
+				9C59167525BF707C00C2D3C4 /* UpdateProfileStoryboard.storyboard in Resources */,
 				9CD074A125B381CE000E967F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,9 +195,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CD0749E25B381CE000E967F /* ViewController.swift in Sources */,
+				9CD93A2C25B95DDD002BE1A7 /* CreateAccountViewController.swift in Sources */,
+				9CD93A3B25B97491002BE1A7 /* AccountController.swift in Sources */,
 				9CD0749A25B381CE000E967F /* AppDelegate.swift in Sources */,
+				9CD93A3E25B974A1002BE1A7 /* UserController.swift in Sources */,
 				9CD074A425B381CE000E967F /* Parking_App_Maham_Pinal_Group_1.xcdatamodeld in Sources */,
+				9C59166B25BF4B1600C2D3C4 /* ImageController.swift in Sources */,
+				9CD93A2F25B95E0D002BE1A7 /* UpdateProfileViewController.swift in Sources */,
+				9CFE0BFF25B7672B00B7D675 /* ViewController.swift in Sources */,
+				9CD93A3825B9633A002BE1A7 /* ParkingLocationViewController.swift in Sources */,
 				9CD0749C25B381CE000E967F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
