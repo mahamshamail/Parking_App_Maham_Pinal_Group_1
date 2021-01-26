@@ -9,23 +9,33 @@
 /* Begin PBXBuildFile section */
 		9C70570F25BFBCFC00E032DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70570E25BFBCFC00E032DD /* AppDelegate.swift */; };
 		9C70571125BFBCFC00E032DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70571025BFBCFC00E032DD /* SceneDelegate.swift */; };
-		9C70571325BFBCFC00E032DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70571225BFBCFC00E032DD /* ViewController.swift */; };
 		9C70571625BFBCFC00E032DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C70571425BFBCFC00E032DD /* Main.storyboard */; };
 		9C70571925BFBCFC00E032DD /* Parking_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C70571725BFBCFC00E032DD /* Parking_App.xcdatamodeld */; };
 		9C70571B25BFBD0200E032DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C70571A25BFBD0200E032DD /* Assets.xcassets */; };
 		9C70571E25BFBD0200E032DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C70571C25BFBD0200E032DD /* LaunchScreen.storyboard */; };
+		9CE1F72025BFC5D700474008 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE1F71F25BFC5D700474008 /* CreateAccountViewController.swift */; };
+		9CE1F72625BFC63600474008 /* ParkingLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE1F72525BFC63600474008 /* ParkingLocationViewController.swift */; };
+		9CE1F72925BFC66200474008 /* UpdateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE1F72825BFC66200474008 /* UpdateProfileViewController.swift */; };
+		9CE1F72C25BFC69100474008 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE1F72B25BFC69100474008 /* SignInViewController.swift */; };
+		9CE1F72F25BFC6A900474008 /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE1F72E25BFC6A900474008 /* AccountController.swift */; };
+		9CE1F73225BFC6BE00474008 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE1F73125BFC6BE00474008 /* UserController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9C70570B25BFBCFC00E032DD /* Parking_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parking_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C70570E25BFBCFC00E032DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C70571025BFBCFC00E032DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9C70571225BFBCFC00E032DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9C70571525BFBCFC00E032DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C70571825BFBCFC00E032DD /* Parking_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Parking_App.xcdatamodel; sourceTree = "<group>"; };
 		9C70571A25BFBD0200E032DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C70571D25BFBD0200E032DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C70571F25BFBD0200E032DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CE1F71F25BFC5D700474008 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		9CE1F72525BFC63600474008 /* ParkingLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingLocationViewController.swift; sourceTree = "<group>"; };
+		9CE1F72825BFC66200474008 /* UpdateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateProfileViewController.swift; sourceTree = "<group>"; };
+		9CE1F72B25BFC69100474008 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		9CE1F72E25BFC6A900474008 /* AccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
+		9CE1F73125BFC6BE00474008 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +68,11 @@
 		9C70570D25BFBCFC00E032DD /* Parking_App */ = {
 			isa = PBXGroup;
 			children = (
+				9C70572925BFC3B100E032DD /* Controller */,
+				9C70572825BFC3A400E032DD /* View */,
+				9C70572725BFC39400E032DD /* Model */,
 				9C70570E25BFBCFC00E032DD /* AppDelegate.swift */,
 				9C70571025BFBCFC00E032DD /* SceneDelegate.swift */,
-				9C70571225BFBCFC00E032DD /* ViewController.swift */,
 				9C70571425BFBCFC00E032DD /* Main.storyboard */,
 				9C70571A25BFBD0200E032DD /* Assets.xcassets */,
 				9C70571C25BFBD0200E032DD /* LaunchScreen.storyboard */,
@@ -68,6 +80,33 @@
 				9C70571725BFBCFC00E032DD /* Parking_App.xcdatamodeld */,
 			);
 			path = Parking_App;
+			sourceTree = "<group>";
+		};
+		9C70572725BFC39400E032DD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9C70572825BFC3A400E032DD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9CE1F71F25BFC5D700474008 /* CreateAccountViewController.swift */,
+				9CE1F72525BFC63600474008 /* ParkingLocationViewController.swift */,
+				9CE1F72825BFC66200474008 /* UpdateProfileViewController.swift */,
+				9CE1F72B25BFC69100474008 /* SignInViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9C70572925BFC3B100E032DD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9CE1F72E25BFC6A900474008 /* AccountController.swift */,
+				9CE1F73125BFC6BE00474008 /* UserController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,9 +179,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CE1F72025BFC5D700474008 /* CreateAccountViewController.swift in Sources */,
+				9CE1F72F25BFC6A900474008 /* AccountController.swift in Sources */,
 				9C70571925BFBCFC00E032DD /* Parking_App.xcdatamodeld in Sources */,
-				9C70571325BFBCFC00E032DD /* ViewController.swift in Sources */,
+				9CE1F73225BFC6BE00474008 /* UserController.swift in Sources */,
+				9CE1F72625BFC63600474008 /* ParkingLocationViewController.swift in Sources */,
 				9C70570F25BFBCFC00E032DD /* AppDelegate.swift in Sources */,
+				9CE1F72C25BFC69100474008 /* SignInViewController.swift in Sources */,
+				9CE1F72925BFC66200474008 /* UpdateProfileViewController.swift in Sources */,
 				9C70571125BFBCFC00E032DD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
