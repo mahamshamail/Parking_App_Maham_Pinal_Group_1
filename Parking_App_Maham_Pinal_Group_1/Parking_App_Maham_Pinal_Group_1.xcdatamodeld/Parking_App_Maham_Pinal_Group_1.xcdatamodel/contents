@@ -23,7 +23,7 @@
         <attribute name="parking_date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="parking_id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="street_address" optional="YES" attributeType="String"/>
-        <attribute name="user_id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="user_id" optional="YES" attributeType="String"/>
         <relationship name="userID" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="parkingID" inverseEntity="User"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
