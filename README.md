@@ -48,6 +48,7 @@ Parking App Group 1
 | Pinal’s List of functionalities  | Maham’s List of functionalities|
 | ------------- | ------------- |
 | Content Cell  | Content Cell  |
+  Content Cell  
 | Content Cell  | Content Cell  |
 
 | Pinal (Completed)  | Maham (Completed) |
