@@ -1,12 +1,10 @@
 
 //
 //  AccountController.swift
-//  Parking_App_Maham_Pinal_Group_1
+//  Parking_App
 //
-//  Created by Maham Shamail on 21/01/2021.
-//  Copyright © 2021 Maham Shamail. All rights reserved.
-// account: date-created, date_modified, email, is_active, password
-// user : car_plate_no, contact_no, email, first_name, last_name, profile_pic, user_id
+//  Created by Maham Shamail on 26/01/2021.
+//
 
 import Foundation
 import CoreData

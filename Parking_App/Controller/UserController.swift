@@ -1,12 +1,10 @@
 
 //
 //  UserController.swift
-//  Parking_App_Maham_Pinal_Group_1
+//  Parking_App
 //
-//  Created by Maham Shamail on 21/01/2021.
-//  Copyright © 2021 Maham Shamail. All rights reserved.
+//  Created by Maham Shamail on 26/01/2021.
 //
-
 import Foundation
 import CoreData
 import UIKit
@@ -20,6 +18,7 @@ class UserController {
     
     func saveProfile(firstname: String, lastname: String, carplate: String, contact: String?, emailA: String, profilePic: String? ){
         let email = UserDefaults.standard.value(forKey: "user_email") as! String
+        //let userID = UserDefaults.standard.value(forKey: "userID") as! String
         
         let profileToUpdate = self.searchProfile(email: email)
         
@@ -35,7 +34,6 @@ class UserController {
                 }
                 profileToUpdate!.email = emailA
                 profileToUpdate?.profile_pic = profilePic
-              //  profileToUpdate!.birthdate = birthdate
                 
                 try managedObjectContext.save()
                 
@@ -58,6 +56,10 @@ class UserController {
                 print(#function, " user_id: \(profile.user_id?.uuidString) \nemail \(profile.email) \nfirstname: \(profile.first_name) \nlastname \(profile.last_name) \ncarplate: \(profile.car_plate_no) \nprofile_pic: \(profile.profile_pic) \ncontact: \(profile.contact_no)  ")
               //  managedObjectContext.delete(profile)
               //  try managedObjectContext.save()
+             //   let userID = UserDefaults.standard.value(forKey: "userID") as! UUID
+              //  UserDefaults.standard.setValue(profile.user_id!, forKey: "userID")
+
+
             }
             
         }catch let error{

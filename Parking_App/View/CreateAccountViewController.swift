@@ -1,10 +1,9 @@
 
 //
 //  CreateAccountViewController.swift
-//  Parking_App_Maham_Pinal_Group_1
+//  Parking_App
 //
-//  Created by Maham Shamail on 21/01/2021.
-//  Copyright © 2021 Maham Shamail. All rights reserved.
+//  Created by Maham Shamail on 26/01/2021.
 //
 
 import UIKit

@@ -68,6 +68,7 @@ class SignInViewController: UIViewController {
     func loginSuccessful(){
         UserDefaults.standard.setValue(email.text!, forKey: "user_email")
         
+
         let alert = UIAlertController(title: "Login successful", message: "You have successfully logged in.", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "default action"), style: .default, handler: {_ in
