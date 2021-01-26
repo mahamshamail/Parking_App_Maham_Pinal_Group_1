@@ -1,15 +1,14 @@
 //
 //  AppDelegate.swift
-//  Parking_App_Maham_Pinal_Group_1
+//  Parking_App
 //
-//  Created by Maham Shamail on 16/01/2021.
-//  Copyright © 2021 Maham Shamail. All rights reserved.
+//  Created by Maham Shamail on 25/01/2021.
 //
 
 import UIKit
 import CoreData
 
-@UIApplicationMain
+@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
@@ -42,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          application to it. This property is optional since there are legitimate
          error conditions that could cause the creation of the store to fail.
         */
-        let container = NSPersistentContainer(name: "Parking_App_Maham_Pinal_Group_1")
+        let container = NSPersistentContainer(name: "Parking_App")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 // Replace this implementation with code to handle the error appropriately.
