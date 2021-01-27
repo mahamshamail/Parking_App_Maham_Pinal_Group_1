@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		69FB8C2925C10E5100583FF7 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FB8C2825C10E5100583FF7 /* UserController.swift */; };
 		9C70570F25BFBCFC00E032DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70570E25BFBCFC00E032DD /* AppDelegate.swift */; };
 		9C70571125BFBCFC00E032DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70571025BFBCFC00E032DD /* SceneDelegate.swift */; };
 		9C70571925BFBCFC00E032DD /* Parking_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C70571725BFBCFC00E032DD /* Parking_App.xcdatamodeld */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		69FB8C2825C10E5100583FF7 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		9C70570B25BFBCFC00E032DD /* Parking_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parking_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C70570E25BFBCFC00E032DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C70571025BFBCFC00E032DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		9C70572925BFC3B100E032DD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				69FB8C2825C10E5100583FF7 /* UserController.swift */,
 				9CE1F78825C090D400474008 /* ParkingDataController.swift */,
 			);
 			path = Controller;
@@ -168,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69FB8C2925C10E5100583FF7 /* UserController.swift in Sources */,
 				9CE1F78925C090D400474008 /* ParkingDataController.swift in Sources */,
 				9C70571925BFBCFC00E032DD /* Parking_App.xcdatamodeld in Sources */,
 				9CE1F77D25C0906800474008 /* AddParkingViewController.swift in Sources */,
@@ -316,6 +320,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Parking_App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,6 +339,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Parking_App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

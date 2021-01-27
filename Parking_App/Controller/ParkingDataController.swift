@@ -31,8 +31,7 @@ class ParkingDataController{
             newParking.latitude = latitude
             newParking.longitude = longitude
             newParking.parking_id = Int16(Int((Int16(parkingId))))
-           // newParking.user_id = Int16(Int((Int16(parkingData.user_id))))
-            //newParking.user_id = 1
+            newParking.user_id = userId
             newParking.street_address = streetAddress
 
             try moc.save()
@@ -47,30 +46,30 @@ class ParkingDataController{
 
         }
     }
-//
-//    func getAllParking(userID : Int) -> [Parking]?{
-//
-//        let fetchRequest = NSFetchRequest<Parking>(entityName: "Parking")
-//
-//        let predicate = NSPredicate(format: "user_id == %@", userID)
-//        fetchRequest.predicate = predicate
-//
-//        let sortDescriptors = NSSortDescriptor(key: "parking_date", ascending: false)
-//        fetchRequest.sortDescriptors = [sortDescriptors]
-//        do{
-//            let result = try moc.fetch(fetchRequest)
-//            let parkingList = result as [Parking]
-//
-////            for parking in parkingList{
-////                print("carPlateNo : \(parking.car_plate_no!) UserId : \(parking.user_id) parkingId : \(parking.parking_id) Street add : \(parking.street_address!) \n Lat : \(parking.latitude) \n Long : \(parking.longitude) \n Date : \(parking.parking_date!)")
-////            }
-//
-//            return parkingList
-//
-//        }catch let error{
-//            print(#function, "Couldn't fetch records", error.localizedDescription)
-//        }
-//        return nil
-//    }
+    
+    func getAllParking(userID : UUID) -> [Parking]?{
+
+        let fetchRequest = NSFetchRequest<Parking>(entityName: "Parking")
+
+        let predicate = NSPredicate(format: "user_id == %@", userID as CVarArg)
+        fetchRequest.predicate = predicate
+
+        let sortDescriptors = NSSortDescriptor(key: "parking_date", ascending: false)
+        fetchRequest.sortDescriptors = [sortDescriptors]
+        do{
+            let result = try moc.fetch(fetchRequest)
+            let parkingList = result as [Parking]
+
+            for parking in parkingList{
+                print("carPlateNo : \(parking.car_plate_no!) UserId : \(parking.user_id) parkingId : \(parking.parking_id) Street add : \(parking.street_address!) \n Lat : \(parking.latitude) \n Long : \(parking.longitude) \n Date : \(parking.parking_date!)")
+            }
+
+            return parkingList
+
+        }catch let error{
+            print(#function, "Couldn't fetch records", error.localizedDescription)
+        }
+        return nil
+    }
 }
 
