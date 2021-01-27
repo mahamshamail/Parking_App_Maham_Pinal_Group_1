@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		69FB8C2925C10E5100583FF7 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FB8C2825C10E5100583FF7 /* UserController.swift */; };
+		69FB8C2C25C10F6D00583FF7 /* ParkingLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FB8C2B25C10F6D00583FF7 /* ParkingLocationViewController.swift */; };
 		9C70570F25BFBCFC00E032DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70570E25BFBCFC00E032DD /* AppDelegate.swift */; };
 		9C70571125BFBCFC00E032DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C70571025BFBCFC00E032DD /* SceneDelegate.swift */; };
 		9C70571925BFBCFC00E032DD /* Parking_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C70571725BFBCFC00E032DD /* Parking_App.xcdatamodeld */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		69FB8C2825C10E5100583FF7 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		69FB8C2B25C10F6D00583FF7 /* ParkingLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingLocationViewController.swift; sourceTree = "<group>"; };
 		9C70570B25BFBCFC00E032DD /* Parking_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parking_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C70570E25BFBCFC00E032DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C70571025BFBCFC00E032DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 		9C70572825BFC3A400E032DD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				69FB8C2B25C10F6D00583FF7 /* ParkingLocationViewController.swift */,
 				9CE1F77C25C0906800474008 /* AddParkingViewController.swift */,
 				9CE1F77F25C0907500474008 /* ListViewController.swift */,
 				9CE1F78225C0909200474008 /* ParkingDetailViewController.swift */,
@@ -179,6 +182,7 @@
 				9CE1F78025C0907500474008 /* ListViewController.swift in Sources */,
 				9CE1F78625C090BA00474008 /* ParkingTableViewCell.swift in Sources */,
 				9CE1F78325C0909200474008 /* ParkingDetailViewController.swift in Sources */,
+				69FB8C2C25C10F6D00583FF7 /* ParkingLocationViewController.swift in Sources */,
 				9C70571125BFBCFC00E032DD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

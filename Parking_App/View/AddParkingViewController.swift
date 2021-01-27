@@ -27,6 +27,7 @@ class AddParkingViewController: UIViewController, UIPickerViewDelegate, UIPicker
     var latitude : Double = 0.0
     var longitude : Double = 0.0
     var parkingId : Int = 1
+    let userController = UserController()
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,9 +79,12 @@ class AddParkingViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     @IBAction func btnAddParking(_ sender: Any) {
         
-        if checkValidations() {
+        if checkValidations() && isCurrentLocation == false {
             print("Validate true")
             self.getLocation(address: "\(txtStreetAdd.text ?? "Toronto")")
+        }
+        if checkValidations() && isCurrentLocation == true {
+            self.insertParkingData(lat: self.latitude, long: self.longitude)
         }
     }
     
@@ -100,7 +104,6 @@ class AddParkingViewController: UIViewController, UIPickerViewDelegate, UIPicker
             displayDialog(strtitle: "Error!", strMsg: "Please enter mininum 2 and maximum 5 character for Suit number of Host.")
         }
         else if (txtStreetAdd.text == nil && txtStreetAdd.text?.isEmpty == true){
-           // self.getLocation(address: "\(txtStreetAdd.text ?? "Toronto")")
             isValidate = false
             displayDialog(strtitle: "Error!", strMsg: "Please enter street address.")
         } else {
@@ -113,7 +116,6 @@ class AddParkingViewController: UIViewController, UIPickerViewDelegate, UIPicker
     @IBAction func btnCurrentLocationClick(_ sender: Any) {
         isCurrentLocation = true
        print("btn current location click")
-        //giving permission to authorization for location
         locationManager.requestAlwaysAuthorization()
         locationManager.requestWhenInUseAuthorization()
         if CLLocationManager.locationServicesEnabled(){
@@ -141,36 +143,30 @@ class AddParkingViewController: UIViewController, UIPickerViewDelegate, UIPicker
     }
     
     func insertParkingData(lat:Double, long:Double){
-      
+      isCurrentLocation = false
         if UserDefaults.standard.integer(forKey: "parkingId") != 0{
             parkingId = UserDefaults.standard.integer(forKey: "parkingId") + 1
         }
         
-        //setting UUID into userdefaults in string
-       // let udid = UUID.init()
-        
-        //UserDefaults.standard.set(udid, forKey: "userID")
-//        if let udid = UserDefaults.standard.value(forKey: "userID") as? String, !udid.isEmpty {
-//            userID = udid
-//
-//        }
-//        var userIDGet = UUID.init(uuidString: userID)
-        
-        //maham
-        let userID = UserDefaults.standard.value(forKey: "userID") as! UUID
-        //UserDefaults.standard.setValue(profile.user_id!, forKey: "userID")
-        
-        let insertionStatus = self.parkingDataController.insertAccount(parkingId: parkingId, userId: userID, buildingCode: txtBuildingCode.text!, carPlateNo: txtCarPlateNo.text!, hoursToPark: selectedHours, noOFHosts: txtNoOfHost.text!, streetAddress: txtStreetAdd.text!, latitude: self.latitude, longitude: self.longitude, parkingDate: Date())
-                switch insertionStatus {
-                case .INSERT_SUCCESS:
-                    UserDefaults.standard.set(parkingId, forKey: "parkingId")
-                    print(#function, "account created")
-                    parkingAddDialog(strtitle: "Hello", strMsg: "Your Parking Booked Successfully.")
+        let email = UserDefaults.standard.value(forKey: "user_email") as! String
+        let currentUser = self.userController.searchProfile(email: email)
+        if currentUser != nil{
+           // print("Dataaaa \(currentUser?.user_id!)")
+            
+            let insertionStatus = self.parkingDataController.insertAccount(parkingId: parkingId, userId: (currentUser?.user_id)!, buildingCode: txtBuildingCode.text!, carPlateNo: txtCarPlateNo.text!, hoursToPark: selectedHours, noOFHosts: txtNoOfHost.text!, streetAddress: txtStreetAdd.text!, latitude: self.latitude, longitude: self.longitude, parkingDate: Date())
+                    switch insertionStatus {
+                    case .INSERT_SUCCESS:
+                        UserDefaults.standard.set(parkingId, forKey: "parkingId")
+                        print(#function, "account created")
+                        parkingAddDialog(strtitle: "Hello  \(currentUser?.first_name! ?? "")", strMsg: "Your Parking Booked Successfully.")
 
-                    self.navigationController?.popViewController(animated: true)
-                case .INSERT_FAILURE:
-                    print(#function, "Somethign went wrong. Sorry for inconvenience")
-                }
+                        self.navigationController?.popViewController(animated: true)
+                    case .INSERT_FAILURE:
+                        print(#function, "Somethign went wrong. Sorry for inconvenience")
+                    }
+        }
+        
+       
     }
 }
 
@@ -217,18 +213,16 @@ extension AddParkingViewController : CLLocationManagerDelegate{
                         self.latitude = myLocation.coordinate.latitude
                         self.longitude = myLocation.coordinate.longitude
                     }else{
-                       // self.txtStreetAdd.text = "Address is not found."
                         displayDialog(strtitle: "Error", strMsg: "Address is not found. Please enter valid address")
                     }
                 }
-                isCurrentLocation = false
             }
-            self.insertParkingData(lat: self.latitude, long: self.longitude)
-            
-         }
+            else{
+                self.insertParkingData(lat: self.latitude, long: self.longitude)
+            }
+            }
          else
          {
-            //labelCoordinate.text = "Error"
             print("Error")
          }
        }

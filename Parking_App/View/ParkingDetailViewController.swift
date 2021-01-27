@@ -34,17 +34,30 @@ class ParkingDetailViewController: UIViewController {
             return
         }
         let newDate = dateFormatter.string(from: currentParking.parking_date!)
+        if currentParking.hours_to_park == 1{
+            txtHours.text = "You can park your car till " + String(currentParking.hours_to_park) + " Hour"
+        }else{
         txtHours.text = "You can park your car till " + String(currentParking.hours_to_park) + " Hours"
+        }
         txtNoOfHost.text = String(currentParking.no_of_hosts!)
         lblAddress.text = currentParking.street_address
         txtBlockNo.text = currentParking.building_code
        txtDate.text = newDate
         lblCarPlateNo.text = "Car Plate No : " + currentParking.car_plate_no!
         navigationController?.navigationItem.backBarButtonItem?.tintColor = UIColor.white
-        
-
-    }
+            
+}
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "maproute"
+        {
+            print("Parking Data lat \(selectedParking!.latitude)")
+            let vc = segue.destination as! ParkingLocationViewController
+            vc.latitude = selectedParking!.latitude
+            vc.longitude = selectedParking!.longitude
+            vc.streetAddress = selectedParking!.street_address!
+    }
+    }
 
     /*
     // MARK: - Navigation
