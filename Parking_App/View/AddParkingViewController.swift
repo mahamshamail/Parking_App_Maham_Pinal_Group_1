@@ -3,8 +3,10 @@
 //  Parking_App_Maham_Pinal_Group_1
 //
 //  Created by Pinal Patel on 2021-01-16.
-//  Copyright © 2021 Maham Shamail. All rights reserved.
-//
+
+//Group - 1
+//Saiyeda Maham Shamail 101328732
+//101334143 - Pinalben Patel
 
 import UIKit
 import CoreLocation

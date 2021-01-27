@@ -3,8 +3,12 @@
 //  Parking_App_Maham_Pinal_Group_1
 //
 //  Created by Pinal Patel on 2021-01-17.
-//  Copyright © 2021 Maham Shamail. All rights reserved.
-//
+
+
+//Group - 1
+//Saiyeda Maham Shamail 101328732
+//101334143 - Pinalben Patel
+
 
 import UIKit
 
@@ -21,7 +25,7 @@ class ParkingDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.dateFormatter.dateFormat = "yyyy-MM-dd"
+        self.dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss z"
         
         self.lblAddress.layer.cornerRadius = 5
         self.lblAddress.layer.masksToBounds = true

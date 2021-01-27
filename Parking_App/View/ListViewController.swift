@@ -3,8 +3,10 @@
 //  Parking_App_Maham_Pinal_Group_1
 //
 //  Created by Pinal Patel on 2021-01-16.
-//  Copyright © 2021 Maham Shamail. All rights reserved.
-//
+
+//Group - 1
+//Saiyeda Maham Shamail 101328732
+//101334143 - Pinalben Patel
 
 import UIKit
 import Foundation
@@ -28,7 +30,7 @@ class ListViewController: UIViewController {
         tableParking.delegate = self
         tableParking.dataSource = self
         self.tableParking.rowHeight = 133
-        self.dateFormatter.dateFormat = "yyyy-MM-dd"
+        self.dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss z"
         let email = UserDefaults.standard.value(forKey: "user_email") as! String
         self.currentUser = self.userController.searchProfile(email: email)!
         if currentUser != nil{
