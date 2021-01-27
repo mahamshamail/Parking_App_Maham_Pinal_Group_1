@@ -158,6 +158,11 @@ class AddParkingViewController: UIViewController, UIPickerViewDelegate, UIPicker
                     case .INSERT_SUCCESS:
                         UserDefaults.standard.set(parkingId, forKey: "parkingId")
                         print(#function, "account created")
+                        txtStreetAdd.text = ""
+                        txtBuildingCode.text = ""
+                        txtNoOfHost.text = ""
+                        txtCarPlateNo.text = ""
+                        
                         parkingAddDialog(strtitle: "Hello  \(currentUser?.first_name! ?? "")", strMsg: "Your Parking Booked Successfully.")
 
                         self.navigationController?.popViewController(animated: true)

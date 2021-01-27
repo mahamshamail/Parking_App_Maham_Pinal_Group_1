@@ -29,28 +29,27 @@ class ListViewController: UIViewController {
         tableParking.dataSource = self
         self.tableParking.rowHeight = 133
         self.dateFormatter.dateFormat = "yyyy-MM-dd"
-        if UserDefaults.standard.value(forKey: "user_email") != nil{
         let email = UserDefaults.standard.value(forKey: "user_email") as! String
         self.currentUser = self.userController.searchProfile(email: email)!
         if currentUser != nil{
             self.list = self.parkingDataController.getAllParking(userID: currentUser.user_id!)!
             print("Dataaaa \(list.count)")
         }
-        }
+        
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
         print("viewWillAppear")
         self.list = self.parkingDataController.getAllParking(userID: currentUser.user_id!)!
+        self.tableParking.reloadData()
         if self.list.count > 0{
-            EmptyMessage(message: "", isLabel: false )
+            EmptyMessage(message: " ", isLabel: false )
         }
         else{
             EmptyMessage(message: "You don't have any booked Parking!.", isLabel: true )
-    
         }
-        self.tableParking.reloadData()
+       
         
     }
 
@@ -64,13 +63,14 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     func EmptyMessage(message:String,isLabel : Bool) {
-        if islabel {
-            let rect = CGRect(origin: CGPoint(x: 0,y :0), size: CGSize(width: self.view.bounds.size.width, height: self.view.bounds.size.height))
-            let messageLabel = UILabel(frame: rect)
+        let rect = CGRect(origin: CGPoint(x: 0,y :0), size: CGSize(width: self.view.bounds.size.width, height: self.view.bounds.size.height))
+        let messageLabel = UILabel(frame: rect)
+        if isLabel {
+           
             messageLabel.text = message
-         messageLabel.textColor = UIColor.blue
+            messageLabel.textColor = UIColor.blue
             messageLabel.numberOfLines = 0;
-         messageLabel.textAlignment = .center;
+            messageLabel.textAlignment = .center;
             messageLabel.font = UIFont(name: "TrebuchetMS", size: 15)
             messageLabel.sizeToFit()
 
@@ -78,19 +78,19 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
          self.tableParking.separatorStyle = .none;
         }
         else{
-            
+            if messageLabel.isHidden == false{
+            messageLabel.isHidden = true
+                messageLabel.text = " "
+                self.tableParking.backgroundView = messageLabel;
+                self.tableParking.separatorStyle = .none;
+            }
         }
-           
        }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if self.list.count > 0{
                 return 1
-        }else{
-            EmptyMessage(message: "You don't have any booked Parking!.", isLabel: true)
-            return 0
-        }
+       
         
     }
     // Set the spacing between sections

@@ -43,7 +43,6 @@ class ParkingDataController{
                 print(#function, "Something went wrong. Couldn't add parking")
                 print(#function, error, error.localizedDescription)
                 return ParkingStatus.INSERT_FAILURE
-
         }
     }
     
@@ -60,9 +59,9 @@ class ParkingDataController{
             let result = try moc.fetch(fetchRequest)
             let parkingList = result as [Parking]
 
-            for parking in parkingList{
-                print("carPlateNo : \(parking.car_plate_no!) UserId : \(parking.user_id) parkingId : \(parking.parking_id) Street add : \(parking.street_address!) \n Lat : \(parking.latitude) \n Long : \(parking.longitude) \n Date : \(parking.parking_date!)")
-            }
+//            for parking in parkingList{
+//                print("carPlateNo : \(parking.car_plate_no!) UserId : \(parking.user_id) parkingId : \(parking.parking_id) Street add : \(parking.street_address!) \n Lat : \(parking.latitude) \n Long : \(parking.longitude) \n Date : \(parking.parking_date!)")
+//            }
 
             return parkingList
 
