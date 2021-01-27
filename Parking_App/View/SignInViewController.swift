@@ -1,16 +1,7 @@
-
-//
-//  ViewController.swift
-//  Parking_App_Maham_Pinal_Group_1
-//
-//  Created by Maham Shamail on 19/01/2021.
-//  Copyright © 2021 Maham Shamail. All rights reserved.
-//
-
-/*
- 
- To do
- */
+// Group 1
+// 101328732 - Saiyeda Maham Shamail
+// 101334143 - Pinalben Patel
+// Maham's code
 
 import UIKit
 
@@ -23,6 +14,7 @@ class SignInViewController: UIViewController {
     let accountController = AccountController()
     let users = UserController()
     @IBOutlet weak var password: UITextField!
+    let userController = UserController()
     
     
     override func viewDidLoad() {
@@ -67,7 +59,6 @@ class SignInViewController: UIViewController {
     }
     func loginSuccessful(){
         UserDefaults.standard.setValue(email.text!, forKey: "user_email")
-        
 
         let alert = UIAlertController(title: "Login successful", message: "You have successfully logged in.", preferredStyle: .alert)
         
@@ -78,6 +69,8 @@ class SignInViewController: UIViewController {
             let tabContainer = storyboard.instantiateViewController(withIdentifier: "TabContainer")
             
             tabContainer.navigationItem.hidesBackButton = true
+            
+            
             tabContainer.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "SignOut", style: .plain, target: self, action: #selector(self.signout))
             
             self.navigationController?.pushViewController(tabContainer, animated: true)

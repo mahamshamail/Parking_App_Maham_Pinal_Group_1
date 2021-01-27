@@ -1,10 +1,8 @@
+// Group 1
+// 101328732 - Saiyeda Maham Shamail
+// 101334143 - Pinalben Patel
+// Maham's code
 
-//
-//  UserController.swift
-//  Parking_App
-//
-//  Created by Maham Shamail on 26/01/2021.
-//
 import Foundation
 import CoreData
 import UIKit

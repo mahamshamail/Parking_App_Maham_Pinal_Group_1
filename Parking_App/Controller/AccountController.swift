@@ -1,10 +1,7 @@
-
-//
-//  AccountController.swift
-//  Parking_App
-//
-//  Created by Maham Shamail on 26/01/2021.
-//
+// Group 1
+// 101328732 - Saiyeda Maham Shamail
+// 101334143 - Pinalben Patel
+// Maham's code
 
 import Foundation
 import CoreData
@@ -23,8 +20,6 @@ class AccountController{
             newAccount.is_active = true
             newAccount.email = email
             newAccount.password = password
-            
-            
             
             let newUser = NSEntityDescription.insertNewObject(forEntityName: "User", into: managedObjectContext) as! User
             newUser.email = email
@@ -49,7 +44,6 @@ class AccountController{
             }
             
             try managedObjectContext.save()
-            
             print(#function, "Account successfully created")
             return AccountStatus.INSERT_SUCCESS
         

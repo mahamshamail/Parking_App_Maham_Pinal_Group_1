@@ -1,10 +1,7 @@
-//
-//  UpdateProfileViewController.swift
-//  Parking_App_Maham_Pinal_Group_1
-//
-//  Created by Maham Shamail on 21/01/2021.
-//  Copyright © 2021 Maham Shamail. All rights reserved.
-//
+// Group 1
+// 101328732 - Saiyeda Maham Shamail
+// 101334143 - Pinalben Patel
+// Maham's code
 
 import UIKit
 
@@ -39,6 +36,8 @@ class UpdateProfileViewController: UIViewController, UIImagePickerControllerDele
         dismiss(animated: true)
         currentImage = image
         profilePicture.image = currentImage
+        savePng(currentImage)
+
     }
 
     override func viewDidLoad() {
@@ -49,6 +48,8 @@ class UpdateProfileViewController: UIViewController, UIImagePickerControllerDele
         
         self.userController.getAllProfiles()
         self.loadInitialProfile()
+        profilePicture.image = load(fileName: "pic.png")
+
 
     }
     
@@ -151,9 +152,16 @@ class UpdateProfileViewController: UIViewController, UIImagePickerControllerDele
             //print("emailAdd: \(emailAdd)")
             self.accountController.updateAccount(emailAA: emailAdd, pass: oldPwd, dateModified: Date())
             
+            
           
             // user : car_plate_no, contact_no, email, first_name, last_name, profile_pic, user_id
             self.userController.saveProfile(firstname: fname, lastname: lname, carplate: car_plate, contact: contact, emailA: emailAdd, profilePic: nil )
+            
+            let alert = UIAlertController(title: "Update Successful", message: "Your prefered fields have been updated", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "default action"), style: .default, handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
            
         }
     }
@@ -184,6 +192,27 @@ class UpdateProfileViewController: UIViewController, UIImagePickerControllerDele
             self.contactNumber.text = currentUser!.contact_no
             self.carPlateNumber.text = currentUser!.car_plate_no
         }
+    }
+    func savePng(_ image: UIImage) {
+        if let pngData = image.pngData(),
+            let path = documentDirectoryPath()?.appendingPathComponent("pic.png") {
+            try? pngData.write(to: path)
+        }
+    }
+    func documentDirectoryPath() -> URL? {
+        let path = FileManager.default.urls(for: .documentDirectory,
+                                            in: .userDomainMask)
+        return path.first
+    }
+    private func load(fileName: String) -> UIImage? {
+        let fileURL = documentDirectoryPath()!.appendingPathComponent(fileName)
+        do {
+            let imageData = try Data(contentsOf: fileURL)
+            return UIImage(data: imageData)
+        } catch {
+            print("Error loading image : \(error)")
+        }
+        return nil
     }
 }
 

@@ -1,11 +1,7 @@
-
-//
-//  ParkingLocationViewController.swift
-//  Parking_App_Maham_Pinal_Group_1
-//
-//  Created by Maham Shamail on 21/01/2021.
-//  Copyright © 2021 Maham Shamail. All rights reserved.
-//
+// Group 1
+// 101328732 - Saiyeda Maham Shamail
+// 101334143 - Pinalben Patel
+// Maham's code
 
 import UIKit
 import MapKit
@@ -18,8 +14,12 @@ struct Locations{
 class ParkingLocationViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate{
     
     @IBOutlet weak var mapView: MKMapView!
-    
     let locationManager = CLLocationManager()
+    var  latitude : Double = 0.0
+    var  longitude : Double = 0.0
+    var streetAddress : String = ""
+    var myCurrentLatitude : Double = 0.0
+    var myCurrentLongitude : Double = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,19 +28,18 @@ class ParkingLocationViewController: UIViewController, MKMapViewDelegate, CLLoca
         locationManager.requestAlwaysAuthorization()
         locationManager.requestWhenInUseAuthorization()
         
+        print("LAT \(self.latitude)")
+        print("LONG \(self.longitude)")
+        
         if CLLocationManager.locationServicesEnabled(){
             self.locationManager.delegate = self
             self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             self.locationManager.startUpdatingLocation()
         }
         
-        let locationArray = [
-            Locations(name: "Toronto", coordinates: CLLocationCoordinate2D(latitude: 43.6532, longitude: -79.3832)),
-            Locations(name: "Waterloo", coordinates: CLLocationCoordinate2D(latitude: 43.4643, longitude: -80.5204))
-        ]
+      
         
-        self.displayMarkers(locations: locationArray)
-        self.showRouteOnMap(pickupCoordinate: locationArray[0].coordinates, destinationCoordinate: locationArray[1].coordinates)
+       
     }
     
 
@@ -56,6 +55,9 @@ class ParkingLocationViewController: UIViewController, MKMapViewDelegate, CLLoca
         print("\(myLocation.latitude)")
         print("\(myLocation.longitude)")
         
+        self.myCurrentLatitude = myLocation.latitude
+        self.myCurrentLongitude = myLocation.longitude
+        
         let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
         let region = MKCoordinateRegion(center: myLocation, span: span)
         self.mapView?.setRegion(region, animated: true)
@@ -64,6 +66,13 @@ class ParkingLocationViewController: UIViewController, MKMapViewDelegate, CLLoca
         annotation.coordinate = myLocation
         annotation.title = "My current location"
         self.mapView?.addAnnotation(annotation)
+        
+        let locationArray = [
+            Locations(name: "Current Location", coordinates: CLLocationCoordinate2D(latitude: self.myCurrentLatitude, longitude: self.myCurrentLongitude)),
+            Locations(name: self.streetAddress, coordinates: CLLocationCoordinate2D(latitude: self.latitude, longitude: self.longitude))
+        ]
+        self.displayMarkers(locations: locationArray)
+        self.showRouteOnMap(pickupCoordinate: locationArray[0].coordinates, destinationCoordinate: locationArray[1].coordinates)
         
     }
     

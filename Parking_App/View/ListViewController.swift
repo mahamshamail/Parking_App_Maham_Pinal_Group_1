@@ -1,12 +1,10 @@
-//
-//  ListViewController.swift
-//  Parking_App_Maham_Pinal_Group_1
-//
-//  Created by Pinal Patel on 2021-01-16.
-//  Copyright © 2021 Maham Shamail. All rights reserved.
-//
+// Group 1
+// 101328732 - Saiyeda Maham Shamail
+// 101334143 - Pinalben Patel
+// Pinal's code
 
 import UIKit
+import Foundation
 
 class ListViewController: UIViewController {
 
@@ -16,6 +14,10 @@ class ListViewController: UIViewController {
     var list = [Parking]()
     let dateFormatter = DateFormatter()
     let cellSpacingHeight: CGFloat = 7
+    let userController = UserController()
+    var currentUser = User()
+    var islabel = false
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,38 +25,70 @@ class ListViewController: UIViewController {
         tableParking.delegate = self
         tableParking.dataSource = self
         self.tableParking.rowHeight = 133
-        self.dateFormatter.dateFormat = "yyyy-MM-dd"
-       // self.list = self.parkingDataController.getAllParking(userID: 2)!
-        let txtTitle = UILabel()
-        txtTitle.text = "Parking List"
-        txtTitle.sizeToFit()
-        txtTitle.textColor = .white
-            let leftItem = UIBarButtonItem(customView: txtTitle)
-            self.navigationItem.leftBarButtonItem = leftItem
+        self.dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss z"
+        let email = UserDefaults.standard.value(forKey: "user_email") as! String
+        self.currentUser = self.userController.searchProfile(email: email)!
+        if currentUser != nil{
+            self.list = self.parkingDataController.getAllParking(userID: currentUser.user_id!)!
+            print("Dataaaa \(list.count)")
+        }
         
-        let logoutBarButtonItem = UIBarButtonItem(title: "Logout", style: .done, target: self, action: #selector(logoutUser))
-         self.navigationItem.rightBarButtonItem  = logoutBarButtonItem
-    }
-    
-    @objc func logoutUser(){
-         print("clicked")
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
-      //  self.list = self.parkingDataController.getAllParking(userID: 2)!
+        print("viewWillAppear")
+        self.list = self.parkingDataController.getAllParking(userID: currentUser.user_id!)!
         self.tableParking.reloadData()
+        if self.list.count > 0{
+            EmptyMessage(message: " ", isLabel: false )
+        }
+        else{
+            EmptyMessage(message: "You don't have any booked Parking!.", isLabel: true )
+        }
+       
+        
     }
 
 }
 
 extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
+        
         return self.list.count
     }
     
+    
+    func EmptyMessage(message:String,isLabel : Bool) {
+        let rect = CGRect(origin: CGPoint(x: 0,y :0), size: CGSize(width: self.view.bounds.size.width, height: self.view.bounds.size.height))
+        let messageLabel = UILabel(frame: rect)
+        if isLabel {
+           
+            messageLabel.text = message
+            messageLabel.textColor = UIColor.blue
+            messageLabel.numberOfLines = 0;
+            messageLabel.textAlignment = .center;
+            messageLabel.font = UIFont(name: "TrebuchetMS", size: 15)
+            messageLabel.sizeToFit()
+
+         self.tableParking.backgroundView = messageLabel;
+         self.tableParking.separatorStyle = .none;
+        }
+        else{
+            if messageLabel.isHidden == false{
+            messageLabel.isHidden = true
+                messageLabel.text = " "
+                self.tableParking.backgroundView = messageLabel;
+                self.tableParking.separatorStyle = .none;
+            }
+        }
+       }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+                return 1
+       
+        
     }
     // Set the spacing between sections
         func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -77,13 +111,13 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
             cell?.txtHours.text = "Maximum " + String(list[indexPath.section].hours_to_park) + " Hours"
             cell?.lblCarPlateNo.text = "Car Plate No : " + list[indexPath.section].car_plate_no!
             cell?.txtDate.text = newDate
-            
                   cell!.backgroundColor = UIColor.white
                   cell!.layer.borderColor = UIColor.gray.cgColor
                   cell!.layer.borderWidth = 1
                   cell!.layer.cornerRadius = 5
                   cell!.clipsToBounds = true
         }
+        
         return cell!
     }
     

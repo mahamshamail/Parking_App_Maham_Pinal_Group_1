@@ -1,10 +1,7 @@
-//
-//  ParkingTableViewCell.swift
-//  Parking_App_Maham_Pinal_Group_1
-//
-//  Created by Pinal Patel on 2021-01-16.
-//  Copyright © 2021 Maham Shamail. All rights reserved.
-//
+// Group 1
+// 101328732 - Saiyeda Maham Shamail
+// 101334143 - Pinalben Patel
+// Pinal's code
 
 import UIKit
 

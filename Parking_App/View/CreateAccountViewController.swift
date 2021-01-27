@@ -1,10 +1,7 @@
-
-//
-//  CreateAccountViewController.swift
-//  Parking_App
-//
-//  Created by Maham Shamail on 26/01/2021.
-//
+// Group 1
+// 101328732 - Saiyeda Maham Shamail
+// 101334143 - Pinalben Patel
+// Maham's code
 
 import UIKit
 
@@ -29,12 +26,14 @@ class CreateAccountViewController: UIViewController, UIImagePickerControllerDele
         dismiss(animated: true)
         currentImage = image
         profilePicture.image = currentImage
+        savePng(currentImage)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.createAccount.layer.cornerRadius = 5;
         // Do any additional setup after loading the view.
+       // profilePicture.image = load(fileName: "pic.png")
     }
     
     
@@ -146,7 +145,17 @@ class CreateAccountViewController: UIViewController, UIImagePickerControllerDele
             switch insertionStatus {
             case .INSERT_SUCCESS:
                 print(#function, "account created")
-                self.navigationController?.popViewController(animated: true)
+               // self.navigationController?.popViewController(animated: true)
+                let alert = UIAlertController(title: "Account Created", message: "Please sign in to access you account", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "default action"), style: .default,  handler: {_ in
+                                               
+                    self.navigationController?.popViewController(animated: true)
+                                           }))
+                
+                self.present(alert, animated: true, completion: nil)
+                
+               
             case .USER_EXISTS:
                 //exercise: show an alert and provide the options to recover password or activate account
                 print(#function, "User with same email already exists")
@@ -174,5 +183,25 @@ class CreateAccountViewController: UIViewController, UIImagePickerControllerDele
                }
     }
     
-    
+    func savePng(_ image: UIImage) {
+        if let pngData = image.pngData(),
+            let path = documentDirectoryPath()?.appendingPathComponent("pic.png") {
+            try? pngData.write(to: path)
+        }
+    }
+    func documentDirectoryPath() -> URL? {
+        let path = FileManager.default.urls(for: .documentDirectory,
+                                            in: .userDomainMask)
+        return path.first
+    }
+    private func load(fileName: String) -> UIImage? {
+        let fileURL = documentDirectoryPath()!.appendingPathComponent(fileName)
+        do {
+            let imageData = try Data(contentsOf: fileURL)
+            return UIImage(data: imageData)
+        } catch {
+            print("Error loading image : \(error)")
+        }
+        return nil
+    }
 }
