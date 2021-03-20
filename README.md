@@ -1,6 +1,8 @@
 # Parking_App_Maham_Pinal_Group_1
 Parking App Group 1
 
+Visit an App Preview - https://user-images.githubusercontent.com/70823359/111871887-ce8bc980-8962-11eb-9ca4-6717f0526adf.mov
+
 ### January 14th: Discussion about the project. 
 * Zoom meeting discussion about the flow of the app.
 * Pinal made the following app flow sketches:
