@@ -46,19 +46,6 @@ Visit an App Preview - https://user-images.githubusercontent.com/70823359/111871
 2. detail view of each parking when the user taps on any item of the list, display all the information about the parking in appropriate format. 
 3. In the detail view of parking, allow the user to open the parking location on map and display the route to the parking location from the current location of the device. 
 
-#### To be implemented:
-| Pinal’s List of functionalities  | Maham’s List of functionalities|
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-  Content Cell  
-| Content Cell  | Content Cell  |
-
-| Pinal (Completed)  | Maham (Completed) |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
-
-| Pinal (Debugged)  | Maham (Debugged) |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+![image3](https://user-images.githubusercontent.com/50436238/112242427-391e5d00-8c22-11eb-88c5-67d173c301bf.png)
+![unnamed](https://user-images.githubusercontent.com/50436238/112242503-610dc080-8c22-11eb-8d09-b993d863979e.png)
+![unnamed-2](https://user-images.githubusercontent.com/50436238/112242511-63701a80-8c22-11eb-9224-e468137f8aed.png)
